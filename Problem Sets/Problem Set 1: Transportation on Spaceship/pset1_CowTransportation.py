@@ -1,7 +1,7 @@
 ###########################
 # 6.00.2x Problem Set 1: Space Cows
 
-from ps1_partition import get_partitions
+from pset1_partition import get_partitions
 import time
 import collections
 
