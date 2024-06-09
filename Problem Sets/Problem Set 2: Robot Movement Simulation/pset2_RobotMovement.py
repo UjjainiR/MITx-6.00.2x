@@ -2,9 +2,9 @@
 
 import math
 import random
-import ps2_visualize
+import pset2_visualize
 import pylab
-from ps2_verify_movement38 import testRobotMovement       # For Python 3.8
+from pset2_verify_movement38 import testRobotMovement       # For Python 3.8
 
 # === Provided class Position
 class Position(object):
