@@ -2,7 +2,7 @@
 
 import math
 import random
-import pset2_visualize
+import pset2_visualize_HELPER
 import pylab
 from pset2_verify_movement38 import testRobotMovement       # For Python 3.8
 
