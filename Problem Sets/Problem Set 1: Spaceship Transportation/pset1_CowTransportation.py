@@ -138,3 +138,16 @@ def compare_cow_transport_algorithms(cows, limit=10):
     print("The result of brute force algorithm is:\n", brute_force_result)
     print("The number of trips obtained by brute force algorithm is:", len(brute_force_result))
     print("The time taken by brute force algorithm is:", brute_force_time, "\n")
+
+
+"""
+Here is some test data for you to see the results of your algorithms with.
+Do not submit this along with any of your answers. Uncomment the last two
+lines to print the result of your problem.
+"""
+cows = load_cows("pset1_cow_data.txt")
+limit = 10
+print(greedy_cow_transport(cows, limit))
+print(brute_force_cow_transport(cows, limit))
+print(brute_force_cow_transport({'Daisy': 50, 'Buttercup': 72, 'Betsy': 65}, 75))
+compare_cow_transport_algorithms(cows)
