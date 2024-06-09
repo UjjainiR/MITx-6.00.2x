@@ -9,7 +9,6 @@ import collections
 # Part A: Transporting Space Cows
 # ================================
 
-
 def load_cows(filename):
     """
     Read the contents of the given file.  Assumes the file contents contain
@@ -94,13 +93,15 @@ def brute_force_cow_transport(cows, limit=10):
     """
     shortest_trip, shortest_length = None, len(cows) + 1
     for current_trip in get_partitions(cows):
+        if len(current_trip) > shortest_length:
+            continue
         valid_trip = True
         for sub_trip in current_trip:
             sub_weight = sum(cows[cow] for cow in sub_trip)
             if sub_weight > limit:
                 valid_trip = False
                 break
-        if valid_trip and len(current_trip) < shortest_length:
+        if valid_trip:
             shortest_trip = current_trip
             shortest_length = len(current_trip)
     return shortest_trip
